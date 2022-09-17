@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Simple JS gallery</title>
+
+    <style>
+        img {
+            max-width: 250px;
+            max-height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hello! This is simple gallery!</h1>
+
+    <br><br>
+    <span>To include this gallery to your website you have to enter DIV element with class "simpleJsGallery" and your unique gallery id. Inside you have to insert A items with class "simpleJsGallery__item" and img inside. </span>
+    <br>
+    Those items are inserted correctly.
+    <div id="firstGallery" class="simpleJsGallery">
+        <ul>
+            <li>
+                <a href="img/hala_lipowska.jpg" class="simpleJsGallery__item"><img src="img/hala_lipowska.jpg" alt="Hala Lipowska"></a>
+            </li>
+
+            <li>
+                <a href="img/mointain1.jpg" class="simpleJsGallery__item"><img src="img/mointain1.jpg" alt="Jakaś góra"></a>
+            </li>
+
+            <li>
+                <span>If the first element of A item with "simpleJsGallery__item" class isn't IMG this item is interpretted as broken. <strong>Example: </strong></span><br><a href="img/tatry.jpg" class="simpleJsGallery__item"><span>Hello!</span><img src="img/tatry.jpg" alt="Tatry"></a>
+            </li>
+
+            <li>
+                <a href="img/wielka_racza.jpg" class="simpleJsGallery__item"><img src="img/wielka_racza.jpg" alt="Wielka Racza"></a>
+            </li>
+        </ul>
+    </div>
+
+    
+    <br><br>
+    <span>If you want you can create new gallery, but remember to enter an unique ID!</span>
+    <div id="secondGallery" class="simpleJsGallery">
+        <a href="img/hala_lipowska.jpg" class="simpleJsGallery__item"><img src="img/hala_lipowska.jpg" alt="Hala Lipowska"></a>
+        <a href="img/wielka_racza.jpg" class="simpleJsGallery__item"><img src="img/wielka_racza.jpg" alt="Wielka Racza"></a>
+    </div>
+
+
+    <br><br>
+    The last thing you have to do is include JavaScript and CSS files from <strong>/assets</strong> and list your galleries in script in tags <strong>SCRIPT</strong><br>
+    <strong>Example: </strong><br>
+    <code><strong>const firstGallery = new simpleGallery('firstGallery');</strong></code>
+
+    
+    <script src="assets/main.js"></script>
+    
+    <script>
+        const firstGallery = new simpleGallery('firstGallery');
+        const secondGallery = new simpleGallery('secondGallery');
+    </script>
+</body>
+</html>
